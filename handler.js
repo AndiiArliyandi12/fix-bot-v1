@@ -698,10 +698,10 @@ export async function participantsUpdate({ id, participants, action }) {
                                 groupname: await this.getName(id),
                                 membercount: groupMetadata.participants.length
                             })
-    conn.sendButtonDoc(id, text, wm, action == 'add' ? 'ᴡᴇʟᴄᴏᴍᴇ' : 'sᴀʏᴏɴᴀʀᴀᴀ', action === 'add' ? '.intro' : '𝕭𝖔𝖙 ∅༢࿔ྀ', fkontak, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: "https://youtu.be/zc7_OTzW4dM",
+    conn.sendButtonDoc(id, text, wm, action == 'add' ? 'ᴡᴇʟᴄᴏᴍᴇ' : 'sᴀʏᴏɴᴀʀᴀᴀ', action === 'add' ? 'Hai Mek 💦' : '𝕭𝖔𝖙 ∅༢࿔ྀ', fkontak, { contextInfo: { externalAdReply: { showAdAttribution: false,
+    mediaUrl: "https://chat.whatsapp.com/EjczE2AmL7qHnpPbs8d74b",
     mediaType: 2, 
-    description: "https://youtu.be/zc7_OTzW4dM", 
+    description: "https://chat.whatsapp.com/EjczE2AmL7qHnpPbs8d74b", 
     title: '𝕭𝖔𝖙 ∅༢࿔ྀ',
     body: wm,
     thumbnail: await(await fetch(action === 'add' ? wel : lea)).buffer(),
