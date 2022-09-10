@@ -1,22 +1,10 @@
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 let text = `
-┌─「 Donasi • Pulsa 」
-│ • *Telkomsel:* [${global.ppulsa}]
-❏────
-
-┌─「 Donasi • Non Pulsa 」
-│ • *Dana:* [${global.pdana}]
-│ • *Gopay:* [${global.pgopay}]
-│ • *Ovo:* [${global.povo}]
-│ • *Link Aja:* [${global.plinkaja}]
-❏────
+𝕭𝖔𝖙 ∅༢࿔ྀ
 `
 const templateButtons = [
-    {index: 1, urlButton: {displayText: '✨ Saweria', url: psaweria}},
-    {index: 2, urlButton: {displayText: '📷 Instagram', url: sig}},
-    {index: 3, urlButton: {displayText: '🌎 Official Group', url: sgc}},
-    {index: 4, quickReplyButton: {displayText: 'Menu', id: '.menu'}},
-    {index: 5, quickReplyButton: {displayText: 'Owner', id: '.owner'}},
+    {index: 1, quickReplyButton: {displayText: 'Menu', id: '.menu'}},
+    {index: 2, quickReplyButton: {displayText: 'Owner', id: '.owner'}},
 ]
 let tm = {
 text: text,
