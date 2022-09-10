@@ -20,4 +20,4 @@ handler.help = ['lirik'].map(v => v + ' <Apa>')
 handler.tags = ['internet']
 handler.command = /^(lirik|lyrics|lyric)$/i
 
-export default handlerf
+export default handler
