@@ -290,10 +290,10 @@ ${clockStringP(usrs.premiumTime - new Date())}` : ''}
 `
 const listMessage = {
   text: tek,
-  footer: '📮 *Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner',
+  footer: '「▰▰▰▱▱▱▱▱▱▱」',
   mentions: await conn.parseMention(tek),
   title: `${htki} *LIST MENU* ${htka}`,
-  buttonText: `CLICK HERE ⎙`, 
+  buttonText: `「▰▰▱▱▱▱」`, 
   sections
 }
   if (teks == '404') {
