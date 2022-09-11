@@ -29,4 +29,4 @@ handler.command = /^yts(earch)?$/i
 
 handler.register = true
 
-export default handler
+export default handlerp
