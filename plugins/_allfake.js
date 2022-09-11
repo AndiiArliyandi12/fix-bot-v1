@@ -47,15 +47,15 @@ handler.all = async function (m) {
 					description: 'simple bot esm',
 					previewType: "PHOTO",
 					thumbnail: await (await fetch(pp)).buffer(),
-					sourceUrl: "https://github.com/FahriAdison",					
+					sourceUrl: "https://github.com/F",					
 				}
 			}
 		}
 		global.fakeig = {
          contextInfo: { externalAdReply: { showAdAttribution: true,
-            mediaUrl: "https://Instagram.com/bot_whangsaf",
+            mediaUrl: "https://chat.whatsapp.com/EjczE2AmL7qHnpPbs8d74b",
             mediaType: "VIDEO",
-            description: "https://Instagram.com/bot_whangsaf", 
+            description: "https://chat.whatsapp.com/EjczE2AmL7qHnpPbs8d74b", 
             title: 'Simple Bot Esm',
             body: wm,
             thumbnailUrl: pp,
@@ -100,7 +100,7 @@ handler.all = async function (m) {
             { fromMe: false,
             participant: `0@s.whatsapp.net`, ...(m.chat  ? 
             { remoteJid: "status@broadcast" } : {}) },
-            message: { "liveLocationMessage": { "caption":"by : WH MODS DEV","h": `${wm}`, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
+            message: { "liveLocationMessage": { "caption":"by : BOT","h": `${wm}`, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
            }
                
                   global.fliveLoc2 = {
@@ -108,7 +108,7 @@ handler.all = async function (m) {
             { fromMe: false,
             participant: `0@s.whatsapp.net`, ...(m.chat ? 
             { remoteJid: "status@broadcast" } : {}) },
-            message: { "liveLocationMessage": { "title": "WH MODS DEV","h": wm, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
+            message: { "liveLocationMessage": { "title": "BOT","h": wm, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
            }
                
                    global.ftoko = {
