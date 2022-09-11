@@ -26,9 +26,9 @@ let krtu = `0ཻུ۪۪ꦽꦼ̷⸙‹•═════════════�
 let wibu = `https://api-reysekha.herokuapp.com/api/random/cosplay?apikey=apirey` 
 let thumb = await(await fetch(wibu)).buffer()
 conn.sendButtonDoc(m.chat, krtu, wm,'MENU','.menu', m, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: "https://Instagram.com/f",
+    mediaUrl: "https://chat.whatsapp.com/EjczE2AmL7qHnpPbs8d74b",
     mediaType: "VIDEO",
-    description: "https://youtu.be/zc7_OTzW4dM", 
+    description: "https://chat.whatsapp.com/EjczE2AmL7qHnpPbs8d74b", 
     title: '𝕭𝖔𝖙 ∅༢࿔ྀ',
     body: wm,
     thumbnail: thumb,
