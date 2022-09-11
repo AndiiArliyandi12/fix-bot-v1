@@ -1,32 +1,26 @@
-import { youtubeSearch } from '@bochilteam/scraper'
+let yts = require('yt-search')
 let handler = async (m, { text }) => {
   if (!text) throw 'Cari apa?'
-  const { video, channel } = await youtubeSearch(text)
-  let teks = [...video, ...channel].map(v => {
+  let results = await yts(text)
+  let teks = results.all.map(v => {
     switch (v.type) {
       case 'video': return `
-💌 *${v.title}* 
-🔗 _${v.url}_
-⏰ Duration: ${v.durationH}
-📤 Uploaded ${v.publishedTime}
-👁️ ${v.view} views
+*${v.title}* (${v.url})
+Duration: ${v.timestamp}
+Uploaded ${v.ago}
+${v.views} views
       `.trim()
       case 'channel': return `
-╭──────━• *CHANNEL*
-│🎀 *${v.channelName}* 
-│🔗 _${v.url}_
-│📛 _${v.subscriberH} Subscriber_
-│🎥 ${v.videoCount} video
-┗──────━•
+*${v.name}* (${v.url})
+_${v.subCountLabel} (${v.subCount}) Subscriber_
+${v.videoCount} video
 `.trim()
     }
-  }).filter(v => v).join('\n\n─────────────━─────────────\n\n')
-  m.reply(`*${htki} SEARCH ${htka}*\n\n` + teks)
+  }).filter(v => v).join('\n========================\n')
+  m.reply(teks)
 }
 handler.help = ['', 'earch'].map(v => 'yts' + v + ' <pencarian>')
-handler.tags = ['tools']
+handler.tags = ['tools', 'internet', 'downloader']
 handler.command = /^yts(earch)?$/i
 
-handler.register = true
-
-export default handler
+module.exports = handler
