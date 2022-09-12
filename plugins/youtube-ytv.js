@@ -1,7 +1,12 @@
 let limit = 80
 import fetch from 'node-fetch'
 import { youtubeSearch, youtubedl, youtubedlv2, youtubedlv3 } from '@bochilteam/scraper';
-let handler = async (m, { conn, args, isPrems, isOwner }) => {
+let handler = async (m, { conn, groupMetadata, usedPrefix, text, args, command, isPrems, isOwner }) => {
+let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+let pp = await conn.profilePictureUrl(who).catch(_ => hwaifu.getRandom())
+let name = await conn.getName(who)
+
+try {
   if (!args || !args[0]) throw 'Uhm... urlnya mana?'
   let chat = global.db.data.chats[m.chat]
   const isY = /y(es)/gi.test(args[1])
@@ -29,29 +34,51 @@ let handler = async (m, { conn, args, isPrems, isOwner }) => {
 *${htki} YOUTUBE ${htka}*
 
 *${htjava} Title:* ${title}
-*${htjava} Quality:* 360p
 *${htjava} Filesize:* ${video.fileSizeH}
 `.trim(), m)
   let _thumb = {}
   try { _thumb = { thumbnail: await (await fetch(thumbnail)).buffer() } }
   catch (e) { }
-  if (!isLimit) await conn.sendFile(m.chat, link, title + '.mp4', `
-*${htki} YOUTUBE ${htka}*
+  if (!isLimit) await conn.sendButton(m.chat, `*${htki} YOUTUBE ${htka}*
 
 *${htjava} Title:* ${title}
-*${htjava} Quality:* 360p
-*${htjava} Filesize:* ${video.fileSizeH}
-`.trim(), m, false, {
-    ..._thumb,
-    asDocument: chat.useDocument
+*${htjava} Filesize:* ${video.fileSizeH}`, title + '.mp4', await(await fetch(link)).buffer(), [['🎀 Menu', '/menu']], m, {
+            fileLength: fsizedoc,
+            seconds: fsizedoc,
+            jpegThumbnail: Buffer.alloc(0), contextInfo: {
+            mimetype: 'video/mp4',
+          externalAdReply :{
+    mediaUrl: sig,
+    mediaType: 2,
+    description: wm, 
+    title: '👋 Hai, ' + name + ' ' + ucapan,
+    body: botdate,
+    thumbnail: await(await fetch(thumbnail)).buffer(),
+    sourceUrl: link
+     }}
   })
+  } catch {
+let res = await fetch(`https://rest-beni.herokuapp.com/api/youtube?url=${args[0]}`)
+let v = await res.json()
+let caption = `*${htki} YOUTUBE ${htka}*
+
+*ID:* ${v.result.id}
+*title:* ${v.result.title}
+*size:* ${v.result.size}
+*quality:* ${v.result.quality}
+`
+await conn.sendButton(m.chat, caption, wm, v.result.thumb, [
+                ['Mp4', `${usedPrefix}get ${v.result.link}`],
+                ['Mp3', `${usedPrefix}get ${v.result.mp3}`]
+            ], m)
+  }
 }
 handler.help = ['mp4', 'v', ''].map(v => 'yt' + v + ` <url> <without message>`)
 handler.tags = ['downloader']
 handler.command = /^yt(v|mp4)?$/i
 
 handler.exp = 0
-handler.register = true
+handler.register = false
 handler.limit = true
 
 
