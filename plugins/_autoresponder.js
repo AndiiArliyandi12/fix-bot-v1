@@ -58,7 +58,7 @@ let sayangkamuh = saymu[Math.floor(Math.random() * saymu.length)]
 /* - - - - - - - Ini autoresponder by wh mods dev - - - - - - - */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
     
-   /* let hiai = /(hi|hii|hiii|hi aine|hii aine|hiii aine|hy|halo|hallo|helo|hello|hy aine|halo aine|hallo aine|helo aine|hello aine)/i
+   /* let hiai = /(hi|hii|hiii|hi)/z
     let isAih = hiai.exec(m.text)
     let hiain = [
 '🥰',
