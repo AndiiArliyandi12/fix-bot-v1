@@ -74,7 +74,7 @@ let hiaine = hiain[Math.floor(Math.random() * hiain.length)]
           key: m.key,
         }})
     setTimeout(() => {
-    conn.sendFile(m.chat, helloaine, '', '', m, true)
+    conn.sendFile(m.chat, helloaine, '', '', m, false)
     }, 1000)
     }*/
 
