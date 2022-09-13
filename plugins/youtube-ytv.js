@@ -1,6 +1,6 @@
-let limit = 50
-let fetch = require('node-fetch')
-const { servers, ytv } = require('../lib/y2mate')
+let limit = 80
+import fetch from 'node-fetch'
+import { servers, ytv } from '../lib/y2mate.js'
 let handler = async(m, { conn, args, isPrems, isOwner }) => {
     if (!args || !args[0]) return conn.reply(m.chat, 'Uhm... urlnya mana?', m)
     let chat = global.db.data.chats[m.chat]
@@ -21,5 +21,5 @@ let handler = async(m, { conn, args, isPrems, isOwner }) => {
 handler.help = ['ytmp4 <query>']
 handler.tags = ['downloader']
 handler.command = /^yt(v(idi?e?o)?|mp4)?$/i
-handler.limit = true
-module.exports = handler
+
+export default andler
