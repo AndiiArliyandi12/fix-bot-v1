@@ -11,4 +11,4 @@ handler.tags = ['sticker']
 
 handler.command = /^ttp$/i
 
-export default handlera
+export default handler
