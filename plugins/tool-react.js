@@ -7,7 +7,7 @@ conn.relayMessage(m.chat, { reactionMessage: {
 key: {
  id: m.quoted.id,
  remoteJid: m.chat,
- fromMe: true
+ fromMe: false
 },
  text: `${text}`}}, { messageId: m.id })
  }
