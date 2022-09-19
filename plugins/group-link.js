@@ -15,5 +15,7 @@ handler.help = ['linkgroup']
 handler.tags = ['group']
 handler.command = /^link(gro?up)?$/i
 
+handler.group = true
+handler.admin = true
 
 export default handler
