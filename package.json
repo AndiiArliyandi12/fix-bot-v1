@@ -1,6 +1,6 @@
 {
     "name": "wh-mods-dev",
-    "version": "1.2.3",
+    "version": "3.1.0",
     "description": "WhatsApp BOT By wahid",
     "main": "index.js",
     "type": "module",
