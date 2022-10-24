@@ -54,10 +54,10 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/WH-MODS-BOT/fix-bot-v4"
+        "url": "git+https://github.com/WH-MODS-BOT/fix-bot-v1"
     },
     "bugs": {
-        "url": "https://github.com/WH-MODS-BOT/fix-bot-v4/issues"
+        "url": "https://github.com/WH-MODS-BOT/fix-bot-v1/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
